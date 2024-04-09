@@ -58,24 +58,6 @@ module.exports = {
       )
       .setThumbnail(botUser.avatarURL({ dynamic: true, format: 'png', size: 1024 }))
       .setImage(`https://media.discordapp.net/attachments/1225773994423091230/1227263258940145755/250a5d2d0ffe5968a1f44a3372c9b14c.png?ex=6627c4fa&is=66154ffa&hm=917e0dbc94728263b05013ba4369622f56311616455a98cf77ab15916c6982f0&=&format=webp&quality=lossless&width=160&height=160`);
-
-    const button1 = new ButtonBuilder()
-      .setLabel('YouTube')
-      .setURL('https://www.youtube.com/channel/UCPbAvYWBgnYhliJa1BIrv0A')
-      .setStyle(ButtonStyle.Link);
-
-    const button2 = new ButtonBuilder()
-      .setLabel('Discord')
-      .setURL('https://discord.gg/FUEHs7RCqz')
-      .setStyle(ButtonStyle.Link);
-
-    const button3 = new ButtonBuilder()
-      .setLabel('Code')
-      .setURL('https://replit.com/@BEASTGAMERS1/MULTI-MUSIC-BOT-v200?v=1')
-      .setStyle(ButtonStyle.Link);
-      
-    const row = new ActionRowBuilder()
-      .addComponents(button1, button2, button3);
     
     message.reply({ embeds: [embed], components: [row] });
   },
